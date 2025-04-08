@@ -1,0 +1,210 @@
+ /* Estilo geral do body */
+ body {
+     font-family: Arial, sans-serif;
+     margin: 0;
+     padding: 0;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     background-image: url(./v2\ 1.jpg);
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center center;
+     height: 100vh;
+     /* background-position: center; */
+     /* background-repeat: no-repeat; */
+     color: black;
+ }
+
+
+
+ /* Container do formulário */
+ form {
+     background: rgba(0, 0, 0, 0.318);
+     backdrop-filter: blur(10px);
+     border-radius: 10px;
+     padding: 65px;
+     max-width: 450px;
+     width: 100%;
+     box-shadow: 0 4px 15px rgba(123, 218, 86, 0.938);
+ }
+
+
+ .logo {
+     width: 200px;
+ }
+
+
+ /* Estilo dos labels */
+ label {
+     display: block;
+     margin-bottom: 8px;
+     font-weight: bold;
+     color: #06fa3bd0;
+     align-items: center;
+ }
+
+
+ /* Estilo dos inputs e textarea */
+ input[type="text"],
+ input[type="email"],
+ input[type="number"],
+ input[type="tel"],
+ input[type="date"],
+ input[type="color"],
+ input[type="range"],
+ textarea {
+     width: calc(100% - 20px);
+     padding: 10px;
+     margin-bottom: 15px;
+     border: none;
+     border-radius: 5px;
+     background: rgba(255, 255, 255, 0.8);
+     font-size: 1.5rem;
+     color: #333;
+     outline: none;
+     box-shadow: inset 0 1px 3px #000000e4;
+ }
+
+
+
+ /* Desabilitar redimensionamento do textarea */
+ textarea {
+     resize: none;
+ }
+
+
+
+
+ /* Estilo dos checkboxes e radio buttons */
+ input[type="checkbox"],
+ input[type="radio"] {
+     margin-right: 8px;
+ }
+
+
+
+
+
+ /* Botão de envio */
+ input[type="submit"] {
+     background: #216300;
+     color: #fff;
+     border: none;
+     padding: 10px 20px;
+     border-radius: 5px;
+     cursor: pointer;
+     font-size: 1rem;
+     width: 100%;
+     transition: background 0.3s ease;
+     margin-top: 50px;
+ }
+
+
+
+ input[type="submit"]:hover {
+     background: #1cb401;
+ }
+
+ /* Responsividade: Ajustes para dispositivos móveis e tablets */
+
+/* Para dispositivos maiores, como tablets */
+@media (max-width: 1024px) {
+    form {
+        padding: 50px; /* Reduzido o padding para tablets */
+        width: 85%; /* Ajuste na largura */
+    }
+
+    .logo {
+        width: 180px; /* Ajuste no tamanho do logo */
+        height: auto;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="color"],
+    input[type="range"],
+    textarea {
+        font-size: 1.4rem; /* Ajuste na fonte */
+    }
+
+    input[type="submit"] {
+        font-size: 1.2rem; /* Aumenta o tamanho do botão em dispositivos menores */
+    }
+}
+
+/* Para dispositivos móveis (menor que 768px) */
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Adiciona um pouco de espaçamento nas bordas */
+    }
+
+    form {
+        padding: 30px; /* Diminui o padding para telas menores */
+        width: 100%; /* Formulário usa 100% da largura disponível */
+    }
+
+    .logo {
+        width: 150px; /* Reduz o tamanho do logo */
+        height: auto;
+    }
+
+    label {
+        font-size: 1.2rem; /* Ajusta o tamanho da fonte dos labels */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="color"],
+    input[type="range"],
+    textarea {
+        font-size: 1.2rem; /* Ajuste no tamanho das fontes */
+        padding: 8px; /* Diminui o padding dos inputs */
+    }
+
+    input[type="submit"] {
+        padding: 12px 20px; /* Ajusta o tamanho do botão */
+        font-size: 1.1rem; /* Diminui o tamanho da fonte do botão */
+    }
+}
+
+/* Para dispositivos muito pequenos (como celulares em modo retrato) */
+@media (max-width: 480px) {
+    form {
+        padding: 20px; /* Diminui ainda mais o padding */
+        width: 95%; /* Maximiza a largura do formulário */
+    }
+
+    .logo {
+        width: 130px; /* Ajusta ainda mais o tamanho do logo */
+    }
+
+    label {
+        font-size: 1.1rem; /* Ajuste ainda maior no tamanho da fonte dos labels */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="color"],
+    input[type="range"],
+    textarea {
+        font-size: 1.1rem; /* Reduz o tamanho das fontes para telas muito pequenas */
+        padding: 6px; /* Diminui o padding dos inputs */
+    }
+
+    input[type="submit"] {
+        padding: 10px 15px; /* Diminui o tamanho do botão */
+        font-size: 1rem; /* Ajusta a fonte para telas pequenas */
+    }
+}

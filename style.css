@@ -1,0 +1,794 @@
+/* -----------------------------cabeçalho------------------- */
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: black;
+    padding-top: 80px;
+    /* width: 100vw; */
+
+}
+
+
+
+header {
+    background: #000000;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    /* padding: 60px; */
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    width: 100%;
+    z-index: 10;
+}
+
+
+header a {
+    text-align: right;
+    color: rgb(255, 255, 255);
+    padding: 30px;
+    font-size: 35px;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    font-family: "revolution-gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.hamburguer {
+    display: none;
+}
+
+/* .togglemenu {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+} */
+
+
+.logo {
+    text-align: left;
+    padding-left: 1%;
+    width: 13%;
+}
+
+.data {
+    width: 200px;
+    margin-right: auto;
+    margin-left: 15px;
+}
+
+
+.letra {
+    text-align: right;
+    color: white;
+    position: relative;
+    padding: 20 px;
+}
+
+a:hover {
+    color: #06f419;
+    /* Cor do link quando passar o mouse */
+}
+
+
+/* -----------------VIDEO------------------ */
+
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.video-section video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+.texto-piscando {
+    animation: piscar .10s infinite;
+
+}
+
+img {
+    width: 100%;
+    height: 80%;
+}
+
+
+/* ---------------------O ROLE-------------------- */
+
+.conteudo {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    margin: auto;
+    gap: 5%;
+    align-items: start;
+
+}
+
+.conteudo img {
+    width: 20%;
+    height: 20%;
+}
+
+
+
+.apresentacao {
+    margin: 5% 5% 5% 5%;
+
+}
+
+.apresentacao h2 {
+    color: white;
+    font-size: 5em;
+    /* line-height: 40px; */
+    margin-bottom: 5%;
+    text-align: center;
+    font-family: "ccsignlanguage", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.apresentacao p {
+    color: white;
+    font-size: 30px;
+    text-align: justify;
+    /* line-height: 40px; */
+    font-family: "template-gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* ---------------LINE-UP---------------- */
+
+.lineup h2 {
+    color: white;
+    font-size: 5em;
+    /* line-height: 40px; */
+    margin-bottom: 5%;
+    text-align: center;
+    font-family: "ccsignlanguage", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+
+}
+
+.lineup {
+    padding-top: 5%;
+}
+
+
+.carrosel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    font-family: "ccsignlanguage", sans-serif;
+    overflow: hidden;
+}
+ 
+.imagem-hover {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+ 
+.imagem-hover:hover {
+    transform: scale(1.05);
+}
+ 
+.hover-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+ 
+.imagem-hover:hover .hover-text {
+    opacity: 1;
+}
+
+.carrosel div {
+    flex: 1.5;
+    background-size: auto;
+    background-position: top center;
+    /*top bottom center left right*/
+    height: 500px;
+    border-radius: 8px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+}
+
+.carrosel div:hover {
+    filter: grayscale(0%);
+    flex: 2.5;
+    transition: all 0.5s cubic-bezier(.12, .73, .83, .37);
+    box-shadow: 0px 0.8px 15px 0.8px rgb(0, 255, 64);
+}
+
+
+.carrosel:hover div:not(:hover) {
+    filter: grayscale(85%);
+}
+
+.carrosel2 {
+    display: none;
+
+}
+
+
+
+
+/* -------------------------VOTAÇÃO--------------------- */
+
+.texto-batalha {
+    margin: 5% 5% 0 5%;
+
+}
+
+.texto-batalha p {
+    margin: 2% 12% 0 12%;
+    color: rgb(249, 245, 245);
+    font-size: 30px;
+    text-align: justify;
+    /* line-height: 80px; */
+    font-family: "template-gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.texto-batalha h2 {
+    color: white;
+    font-size: 5em;
+    /* line-height: 40px; */
+    margin-bottom: 3%;
+    text-align: center;
+    font-family: "ccsignlanguage", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.subtitulo{
+    margin: 2% 12% 0 12%;
+    color: rgb(0, 255, 64);
+    font-size: 30px;
+    text-align: center;
+    /* line-height: 80px; */
+    font-family: "template-gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.votacao {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    /* margin-bottom: 5%; */
+}
+
+.votacao img {
+    width: 600px;
+    /* height: 500px; */
+    transition: filter 0.3s ease;
+    filter: grayscale(100%);
+}
+
+.votacao img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+    /* Aumenta ligeiramente a imagem */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Efeito de sombra para dar o relevo */
+}
+
+.texto{
+    font-size: 35px;
+    justify-content: center;
+    font-family: "ccsignlanguage", sans-serif;
+    position: relative;
+    
+}
+
+
+.votacao p {
+    color: rgb(255, 255, 255);
+    font-family: "ccsignlanguage", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 7em;
+}
+
+.votacao-mobile p {
+    display: none;
+
+}
+
+.votacao-mobile img {
+    display: none;
+}
+
+
+/* ---------------------FOOTER-------------------- */
+
+.rodape {
+    background: #000;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 -5px 10px rgba(0, 255, 64, 0.5);
+    border-top: 4px solid #04ff00;
+    font-family: "revolution-gothic", sans-serif;
+    /* Aplicando a fonte do cabeçalho */
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #444;
+}
+
+.footer-logo img {
+    width: 120px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.footer-links ul li {
+    display: inline;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+    font-family: "ccsignlanguage", sans-serif;
+    /* Outra opção de fonte do site */
+}
+
+.footer-links ul li a:hover {
+    color: #04ff00;
+}
+
+.footer-social a {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.footer-social a:hover {
+    color: #04ff00;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #bbb;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+p strong {
+    color: rgb(4, 255, 0);
+    font-family: "ccclobberintimecrunchy", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+h2 strong {
+    color: rgb(4, 255, 0);
+    font-family: "ccclobberintimecrunchy", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2em;
+}
+
+
+@keyframes piscar {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+/* ------------------------------------RESPONSIVO------------------------------------------ */
+
+/* Para telas menores que 768px (tablets) */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+        /* Reduz o padding do cabeçalho */
+    }
+
+    nav i {
+        display: block;
+    }
+
+    header a {
+        font-size: 24px;
+        /* Reduz o tamanho da fonte dos links do cabeçalho */
+        padding: 10px;
+    }
+
+    .logo {
+        width: 35%;
+        /* Aumenta um pouco a largura do logo */
+    }
+
+    .conteudo {
+        flex-direction: column;
+        /* Empilha o texto e a imagem */
+        width: 90%;
+        /* Aumenta a largura do conteúdo */
+        margin: auto;
+        /* Centraliza o conteúdo */
+    }
+
+    .apresentacao h2 {
+        font-size: 3em;
+        /* Reduz o tamanho do título */
+    }
+
+    .apresentacao p {
+        font-size: 20px;
+        /* Reduz o tamanho do parágrafo */
+    }
+
+    .lineup h2 {
+        font-size: 3em;
+        /* Reduz o tamanho do título do lineup */
+    }
+
+    .carrosel {
+        flex-direction: column;
+        /* Empilha os itens do carrosel */
+        align-items: center;
+        /* Centraliza os itens do carrosel */
+        margin: 1em;
+        display: none;
+    }
+
+    .carrosel div {
+        width: 80%;
+        /* Ocupa mais largura na tela */
+        height: 300px;
+        /* Reduz a altura */
+        flex: none;
+        /* Impede que os itens do carrosel tentem ocupar a largura */
+        margin-bottom: 1em;
+        /* Adiciona margem entre os itens */
+    }
+
+    .texto-batalha h2 {
+        font-size: 3em;
+        /* Reduz o tamanho do título da batalha */
+    }
+
+    .texto-batalha p {
+        font-size: 20px;
+        /* Reduz o tamanho do parágrafo da batalha */
+        margin: 2% 5% 0 5%;
+        /* Ajusta as margens */
+    }
+
+    .votacao {
+        flex-direction: column;
+        /* Empilha as imagens da votação */
+    }
+
+    .votacao img {
+        width: 80%;
+        /* Ocupa mais largura na tela */
+        max-width: 400px;
+        /* Limita a largura máxima */
+    }
+
+    .votacao p {
+        font-size: 5em;
+        /* Reduz o tamanho do "vs" */
+    }
+
+    .rodape .footer-content {
+        flex-direction: column;
+        /* Empilha os itens do rodapé */
+        text-align: center;
+        /* Centraliza o texto do rodapé */
+    }
+
+    .footer-links ul {
+        flex-direction: column;
+        /* Empilha os links do rodapé */
+        align-items: center;
+    }
+
+    .footer-links ul li {
+        margin: 10px 0;
+    }
+
+    .footer-social {
+        margin-top: 20px;
+        /* Adiciona margem acima dos ícones sociais */
+    }
+}
+
+
+
+
+/* -------------------------------- Para telas menores que 480px (celulares)--------------------------------- */
+@media (max-width: 480px) {
+    header a {
+        font-size: 25px;
+        /* padding: 8px; */
+        margin-bottom: 0;
+    }
+
+    .hamburguer {
+        display: block;
+        font-size: 25px;
+    }
+
+    /* .bi-discord{
+    display: none;
+  } */
+
+    span {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 50px;
+        left: 0;
+        padding: 10px;
+        margin: 0;
+    }
+
+    /* .bi-youtube{
+    display: none;
+  }
+
+  .bi-instagram{
+    display: none;
+  } */
+
+    .logo {
+        width: 50%;
+    }
+
+    .data {
+        width: 20%;
+    }
+
+    .apresentacao h2 {
+        font-size: 2.5em;
+    }
+
+    .apresentacao p {
+        font-size: 18px;
+    }
+
+    .lineup h2 {
+        font-size: 2.5em;
+    }
+
+    .carrosel {
+        /* Mantendo as propriedades para rolagem horizontal */
+        margin: 1em 0;
+        padding-bottom: 1em;
+        display: none;
+    }
+
+    .carrosel2 {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+ 
+
+    /* .carrosel div {
+    width: 80%; 
+        height: 200px;
+        margin-right: 1em;
+        flex: 2.0;
+  } */
+
+    .texto-batalha h2 {
+        font-size: 2.5em;
+    }
+
+    .texto-batalha p {
+        font-size: 16px;
+    }
+
+    .votacao p {
+        display: none;
+    }
+
+    .votacao img {
+        display: none;
+    }
+
+    .votacao-mobile {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        /* margin-left: 20px; */
+        align-items: center;
+        /* margin-bottom: 5%; */
+    }
+
+
+
+    .votacao-mobile {
+        display: flex;
+        justify-content: center;
+    }
+
+    .votacao-mobile p {
+        color: rgb(255, 255, 255);
+        font-family: "ccsignlanguage", sans-serif;
+        font-weight: 200;
+        font-style: italic;
+        font-size: 2em;
+        display: flex;
+    }
+
+
+    .votacao-mobile img {
+        width: 135px;
+        display: flex;
+        /* justify-content: center; */
+
+    }
+}
+
+
+
+
+
+
+.active {
+    display: flex;
+    background-color: black;
+    margin-left: -75px;
+    margin-top: -30px;
+    width: auto;
+}
+
+.letra {
+    right: 0;
+}
+
+.texto-piscando {
+    animation: piscar .10s infinite;
+    position: absolute;
+}
+
+/* ----------------------------------------------------- ESTILO GERAL ---------------------------------------------------- */
+
+.carrosel2 {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.imagemgaleria {
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.imagemgaleria img {
+    width: 100%;
+    height: auto;
+}
+
+.galeria-texto {
+    display: none;  /* Inicialmente escondido */
+    padding-top: 10px;
+    font-size: 1.2em;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
+/* ----------------------------------- Responsivo para Mobile (Tela <= 480px) -------------------------------------- */
+@media (max-width: 480px) {
+    .carrosel2 {
+        display: block;  /* Remove o flexbox para empilhar as imagens */
+    }
+
+    .imagemgaleria {
+        width: 100%;  /* As imagens ocupam 100% da largura */
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .imagemgaleria img {
+        width: 100%;  /* Certifica-se de que a imagem ocupa toda a largura */
+        height: auto;
+    }
+
+    .galeria-texto {
+        display: block;  /* Exibe o texto quando a imagem for clicada */
+        text-align: center;
+        margin-top: 10px;
+        padding: 5px;
+        font-size: 1em;
+        font-family: "ccsignlanguage", sans-serif;
+        color: #ffffff;
+        background: rgba(0, 0, 0, 0.7);
+
+    }
+}
